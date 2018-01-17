@@ -4,12 +4,10 @@ import React from "react";
 // Import Spectacle Core tags
 import {
   BlockQuote,
-  Cite,
   Deck,
   Heading,
   ListItem,
   List,
-  Quote,
   Slide,
   Text,
   Image,
@@ -25,6 +23,7 @@ import preloader from "spectacle/lib/utils/preloader";
 
 // Require CSS
 require("normalize.css");
+require("./styles.css");
 
 const theme = createTheme(
   {
@@ -45,7 +44,20 @@ const theme = createTheme(
 const images = {
   graphql: require("../assets/graphql.svg"),
   github: require("../assets/github.png"),
-  twitter: require("../assets/twitter.svg")
+  twitter: require("../assets/twitter.svg"),
+  twitterTwo: require("../assets/twitter.png"),
+  facebook: require("../assets/facebook.png"),
+  nyt: require("../assets/nyt.png"),
+  pinterest: require("../assets/pinterest.png"),
+  getninjas: require("../assets/getninjas.png"),
+  githubOne: require("../assets/github1.png"),
+  logos: require("../assets/logos.png"),
+  query1: require("../assets/query1.png"),
+  query2: require("../assets/query2.png"),
+  mutation1: require("../assets/mutation1.png"),
+  mutation2: require("../assets/mutation2.png"),
+  screen2: require("../assets/screen2.png"),
+  screen3: require("../assets/screen3.png")
 };
 
 preloader(images);
@@ -66,7 +78,7 @@ export default class Presentation extends React.Component {
             GraphQL
           </Text>
           <Text margin="10px 0 0" textColor="textColorOne" textSize="40px" bold>
-            Linguagem de consulta para a sua API
+            Linguagem de consulta para API's
           </Text>
           <Layout
             style={{
@@ -118,11 +130,6 @@ export default class Presentation extends React.Component {
           </Appear>
           <Appear>
             <Text textColor="textColorOne" margin="25px auto 25px">
-              - Apaixonado por desenvolvimento web
-            </Text>
-          </Appear>
-          <Appear>
-            <Text textColor="textColorOne" margin="25px auto 25px">
               - Entusiasta do JavaScript
             </Text>
           </Appear>
@@ -153,9 +160,82 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
+            <Heading size={3} textColor="textColorTwo" margin="0 0 50px 0">
+              Quem esta usando?
+            </Heading>
+            <Image
+              src={images.logos}
+              style={{ width: 610, margin: "0 0 10 0" }}
+            />
           </BlockQuote>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <Heading size={3} textColor="textColorTwo" margin="0 0 20px 0">
+            Types
+          </Heading>
+          <div className="display-flex">
+            <Image
+              src={images.screen2}
+              margin="0 0 0 20px"
+              style={{ height: 400 }}
+            />
+            <List textColor="textColorOne" margin="50px 0 0 0">
+              <Appear>
+                <ListItem style={{ fontWeight: "bold" }}>Int</ListItem>
+              </Appear>
+              <Appear>
+                <ListItem style={{ fontWeight: "bold" }}>Float</ListItem>
+              </Appear>
+              <Appear>
+                <ListItem style={{ fontWeight: "bold" }}>String</ListItem>
+              </Appear>
+              <Appear>
+                <ListItem style={{ fontWeight: "bold" }}>Boolean</ListItem>
+              </Appear>
+              <Appear>
+                <ListItem style={{ fontWeight: "bold" }}>ID</ListItem>
+              </Appear>
+            </List>
+          </div>
+          <Text textColor="textColorOne" margin="25px auto 25px">
+            GraphQL schema language.
+          </Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <Heading size={3} textColor="textColorTwo" margin="0 0 20px 0">
+            Queries
+          </Heading>
+          <div className="display-flex">
+            <Image src={images.query1} style={{ height: 274 }} />
+            <Appear>
+              <Image src={images.query2} style={{ height: 357 }} />
+            </Appear>
+          </div>
+          <Text textColor="textColorOne" margin="25px auto 25px">
+            Basicamente o GraphQL faz uma seleção de campos em objetos.
+          </Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <Heading size={3} textColor="textColorTwo" margin="0 0 20px 0">
+            Mutations
+          </Heading>
+          <Image src={images.mutation1} />
+          <Appear>
+            <Image src={images.mutation2} />
+          </Appear>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <Text textColor="textColorOne" margin="25px auto 25px">
+            Vamos para o código!
+          </Text>
+          <Text textColor="textColorOne" margin="25px auto 25px">
+            Servidor do exemplo: http://rafaelbastiani.com:5000/graphql
+          </Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <Heading size={3} textColor="textColorTwo" margin="0 0 20px 0">
+            Obrigado!
+          </Heading>
         </Slide>
       </Deck>
     );
