@@ -140,16 +140,16 @@ export default class Presentation extends React.Component {
           textColor="textColorOne"
         >
           <Heading size={2} textColor="textColorTwo" margin="0 0 50px 0">
-            Porque GraphQL?
+            Por que GraphQL?
           </Heading>
           <List margin="0 0 0 50px">
             <Appear>
               <ListItem>
-                Peça o que você precisa, e tenha exatamente o que você pediu
+                Peça o que você precisa e tenha, exatamente, o que você pediu
               </ListItem>
             </Appear>
             <Appear>
-              <ListItem>Tenha vários recursos em um unico request</ListItem>
+              <ListItem>Tenha vários recursos em um único request</ListItem>
             </Appear>
             <Appear>
               <ListItem>
