@@ -142,7 +142,7 @@ export default class Presentation extends React.Component {
           <Heading size={2} textColor="textColorTwo" margin="0 0 50px 0">
             Por que GraphQL?
           </Heading>
-          <List margin="0 0 0 50px">
+          <List margin="0 30px 0 30px" style={{ textAlign: "justify" }}>
             <Appear>
               <ListItem>
                 Peça o que você precisa e tenha, exatamente, o que você pediu
@@ -161,7 +161,7 @@ export default class Presentation extends React.Component {
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BlockQuote>
             <Heading size={3} textColor="textColorTwo" margin="0 0 50px 0">
-              Quem esta usando?
+              Quem está usando?
             </Heading>
             <Image
               src={images.logos}
@@ -179,21 +179,25 @@ export default class Presentation extends React.Component {
               margin="0 0 0 20px"
               style={{ height: 400 }}
             />
-            <List textColor="textColorOne" margin="50px 0 0 0">
+            <List
+              textColor="textColorOne"
+              margin="50px 0 0 0"
+              style={{ fontWeight: "bold" }}
+            >
               <Appear>
-                <ListItem style={{ fontWeight: "bold" }}>Int</ListItem>
+                <ListItem>Int</ListItem>
               </Appear>
               <Appear>
-                <ListItem style={{ fontWeight: "bold" }}>Float</ListItem>
+                <ListItem>Float</ListItem>
               </Appear>
               <Appear>
-                <ListItem style={{ fontWeight: "bold" }}>String</ListItem>
+                <ListItem>String</ListItem>
               </Appear>
               <Appear>
-                <ListItem style={{ fontWeight: "bold" }}>Boolean</ListItem>
+                <ListItem>Boolean</ListItem>
               </Appear>
               <Appear>
-                <ListItem style={{ fontWeight: "bold" }}>ID</ListItem>
+                <ListItem>ID</ListItem>
               </Appear>
             </List>
           </div>
