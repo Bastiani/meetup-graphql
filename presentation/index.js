@@ -176,14 +176,17 @@ export default class Presentation extends React.Component {
           <div className="display-flex">
             <Image
               src={images.screen2}
-              margin="0 0 0 20px"
+              margin="0 0 0 30px"
               style={{ height: 400 }}
             />
             <List
               textColor="textColorOne"
-              margin="50px 0 0 0"
+              margin="50px 0 0 50px"
               style={{ fontWeight: "bold" }}
             >
+              <Appear>
+                <ListItem>"type Post" é um GraphQL Object Type</ListItem>
+              </Appear>
               <Appear>
                 <ListItem>Int</ListItem>
               </Appear>
